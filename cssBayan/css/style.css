@@ -1,0 +1,55 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    background-color:lightgrey;
+}
+
+.bayan-container {
+    width: 70%;
+    margin: 40px auto;
+}
+
+.container input{
+    display: none;
+}
+
+img {
+    width: 400px;
+    height: auto;
+    display: block;
+    justify-content: center;
+}
+
+.bayan-container label{
+    
+    position: relative;
+    z-index: 20;
+    display: block;
+    height: 30px;
+    cursor: pointer;
+    color:blue;
+    font-size: 19px;
+}
+
+.container label:hover{
+    color: black;
+}
+
+.container label:hover:after,
+.container input:checked + label:hover:after{
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 13px;
+    top: 7px;
+    background: transparent url(http://netcribe.com/example/arrow_down.png) no-repeat center center;  
+}
+
+.container input:checked + label:hover:after {
+    background-image: url(http://netcribe.com/example/arrow_up.png);
+}
+
+
+
