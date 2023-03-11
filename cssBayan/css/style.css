@@ -7,60 +7,90 @@ body {
 
 .bayan-container {
     width: 70%;
-    margin: 40px auto;
+    margin: 1em auto;
 }
 
 .container input{
     display: none;
 }
 
-img {
-    width: 400px;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    -webkit-transition: all 1s ease; /* Safari and Chrome */
-    -moz-transition: all 1s ease; /* Firefox */
-    -ms-transition: all 1s ease; /* IE 9 */
-    -o-transition: all 1s ease; /* Opera */
-    transition: all 1s ease;
-}
-
-hr {
-    margin-bottom: 20px;
-}
-
-.bayan-container label{
-    position: relative;
-    display: block;
+label {
+    display: inline-block;
     cursor: pointer;
     color:blue;
-    font-size: 22px;
+    font-size: larger;
     font-weight: 700;
 }
 
-.container label:hover{
+.container label:hover {
     color: black;
 }
 
-.bayan-container input:checked {
-    background-image: url(http://netcribe.com/example/arrow_down.png);
-}
-
-.container input:checked + label:hover:after {
-    background-image: url(http://netcribe.com/example/arrow_up.png);
-}
-
-.bayan-container input:checked ~ img{
+.mem-img{
     -webkit-transform:scale(0.75); /* Safari and Chrome */
     -moz-transform:scale(0.75); /* Firefox */
     -ms-transform:scale(0.75); /* IE 9 */
     -o-transform:scale(0.75); /* Opera */
     transform:scale(0.75);
-    height: 0px;
+    height: 0em;
     margin-bottom: 0;
 }
 
+input:checked ~ .mem-img {
+    max-width: 25em;
+    height: auto;
+    display: block;
+    margin: 1em auto;
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transform: scale(1);
+    transition: all 1s ease;
+}
 
+
+
+input:checked ~ span {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transition: 0.5s ease;
+}
+
+.mem span {
+    visibility: hidden;
+    display:inline-block;
+}
+
+.mem:hover span {
+    visibility: visible;
+}
+
+@media screen and (max-width: 600px) {
+    .bayan-container {
+        width: 90%;
+    }
+    input:checked ~ .mem-img {
+        max-width: 15em;
+    }
+
+}
+
+@media screen and (min-width: 1281px) {
+    input:hover ~ .mem-img {
+        max-width: 25em;
+        height: auto;
+        display: block;
+        margin: 1em auto;
+        -webkit-transition: all 1s ease; /* Safari and Chrome */
+        -moz-transition: all 1s ease; /* Firefox */
+        -ms-transition: all 1s ease; /* IE 9 */
+        -o-transition: all 1s ease; /* Opera */
+        transform: scale(1);
+        transition: all 1s ease;
+    }
+    
+}
 
 
